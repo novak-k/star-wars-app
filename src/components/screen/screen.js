@@ -1,10 +1,13 @@
 import React from 'react';
+import { useSelector } from 'react-redux'
 import Header from '../header/header';
 import Movie from '../movie/movie';
 import MovieDescription from '../movieDescription/movieDescription';
 import './screen.css';
 
 const Screen = () => {
+  const movieData = useSelector((state) => state.movies.value)
+
   const mock = {
             "title": "A New Hope", 
             "episode_id": 4,  
@@ -13,12 +16,13 @@ const Screen = () => {
             "release_date": "1977-05-25", 
   }
 
-let count = 2;
 let movieList = [];
-  for (let i = 0; i < count; i++) {
-    movieList.push(<Movie key={i} movie={mock} />);
+// console.log(movieData.results);
+if (movieData.results !== undefined) {
+  for (let i = 0; i < movieData.results.length; i++) {
+    movieList.push(<Movie key={i} movie={movieData.results[i]} />);
   }
-
+}
     return (
       <div className='screen'>
         <div className='header'>
@@ -28,7 +32,6 @@ let movieList = [];
           <div className='movie-container'>
           {movieList}
           {/* <Movie/> */}
-          {/* <Movie movie={mock}/> */}
           </div>
           <div className='description'>
             <MovieDescription description={mock}/>
