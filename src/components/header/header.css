@@ -1,0 +1,17 @@
+/* .headerBlock {
+  width: 100%;
+  display: flex;
+} */
+
+.dropdown {
+  flex: 1;
+  margin: 10px;
+}
+
+.input-group {
+  margin: 10px;
+}
+
+/* .searchImg {
+  background: transparent no-repeat url("../../images/Vector_search_icon.svg");
+} */

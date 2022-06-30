@@ -1,0 +1,36 @@
+.movie {
+  font-style: normal;
+  font-size: medium;
+  font-weight: normal;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+
+  border: 1px solid lightgray;
+
+}
+
+/* .episodeNum {
+
+} */
+
+.descriptionMovie {
+  font-weight: bold;
+  text-align: left;
+
+}
+
+/* .episodeId {
+  display: inline;
+}
+
+.movieTitle {
+  display: inline;
+} */
+
+.movieRelease {
+  font-weight: bold;
+ 
+}
