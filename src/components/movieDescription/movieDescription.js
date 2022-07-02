@@ -1,9 +1,10 @@
 import React from 'react';
+import { useSelector } from 'react-redux'
 import './movieDescription.css';
 
-const MovieDescription = (props) => {
-  let description = props.description;
+const MovieDescription = () => {
   let listEpisodeId = ['0', 'I', 'II', 'III', 'IV', 'V', 'VI'];
+  const description = useSelector((state) => state.movies.selected);
 
   if (description === undefined || description === null || description === '') {
   return (

@@ -12,6 +12,10 @@
 
 }
 
+.movie:hover {
+  cursor: pointer;
+}
+
 /* .episodeNum {
 
 } */
