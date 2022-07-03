@@ -1,17 +1,17 @@
-/* .headerBlock {
-  width: 100%;
-  display: flex;
-} */
-
 .dropdown {
   flex: 1;
   margin: 10px;
+}
+
+.dropdown-item:hover {
+  cursor: pointer;
 }
 
 .input-group {
   margin: 10px;
 }
 
-/* .searchImg {
-  background: transparent no-repeat url("../../images/Vector_search_icon.svg");
-} */
+.form-control:focus {
+  border: solid 2px yellow !important;
+  box-shadow: none;
+}

@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux'
 import Header from '../header/header';
 import Movie from '../movie/movie';
-import MovieDescription from '../movieDescription/movieDescription';
+import MovieDescription from '../movieDescription';
 import './screen.css';
 
 const Screen = () => {

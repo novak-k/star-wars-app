@@ -21,17 +21,21 @@ export const moviesSlice = createSlice({
       }
     },
     search: (state, action) => {
-      state.data.results = state.initial.results.filter(r => r.title.toLowerCase().includes(action.payload.toLowerCase()))
+      state.data.results = state.initial.results.filter(r => 
+        r.title.toLowerCase().includes(action.payload.toLowerCase()))
     },
     sortEpisode: (state) => {
-      state.data.results = state.data.results.sort((r1,r2) => r1.episode_id-r2.episode_id)
+      state.data.results = state.data.results.sort((r1,r2) => 
+      r1.episode_id-r2.episode_id)
     },
     sortYear: (state) => {
-      state.data.results = state.data.results.sort((r1,r2) => new Date(r1.release_date) - new Date(r2.release_date));
+      state.data.results = state.data.results.sort((r1,r2) => 
+      new Date(r1.release_date) - new Date(r2.release_date));
     },
   }
 })
 
-export const { load, movieSelected, search, sortEpisode, sortYear } = moviesSlice.actions;
+export const { load, movieSelected, search, sortEpisode, sortYear } = 
+moviesSlice.actions;
 
 export default moviesSlice.reducer;

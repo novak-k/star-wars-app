@@ -11,7 +11,6 @@ async function movieService() {
       .catch((err) => {
         console.err(err.message);
       });
- 
 }
 
 export default movieService;

@@ -3,7 +3,6 @@ import { useDispatch } from 'react-redux';
 import { search, sortEpisode, sortYear } from "../../store/moviesSlice";
 import './header.css';
 
-
 const Header = () => {
 
   const dispatch = useDispatch();
@@ -33,24 +32,29 @@ const Header = () => {
             <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
               <div 
                 className="dropdown-item" 
-                onClick={onEpisodeSort}>Episode</div>
+                onClick={onEpisodeSort}>
+              Episode
+              </div>
               <div 
                 className="dropdown-item"
-                onClick={onYearSort}>Year</div>
+                onClick={onYearSort}>
+              Year
+              </div>
             </div>
           </div>
         
-          <div className="input-group rounded">
+           <div className="input-group rounded">
             <input 
               type="search" 
               onChange={onMovieSearch}
-              className="form-control rounded searchImg" 
-              placeholder="Type to search..." 
-              aria-label="Search" 
-              aria-describedby="search-addon" 
+              className="form-control py-2 border-right-0 border" 
+              placeholder="Type to search..."
             />
-            <span className="input-group-text border-0" id="search-addon">
-            <i className="fas fa-search"></i>
+            <span className="input-group-append">
+              <button 
+                className="btn btn-outline-secondary border-left-0 border" type="button">
+                <i className="fas fa-search"></i>
+              </button>
             </span>
           </div>
         </>

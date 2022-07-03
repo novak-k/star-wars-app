@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect } from "react";
 import { load } from "./store/moviesSlice";
 import { useDispatch } from 'react-redux'
-// import './App.css';
+
 import Screen from './components/screen';
 import movieService from './service/movieService';
 
@@ -11,7 +11,6 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       const data = await movieService();
-     
       dispatch(load(data));
     }
     fetchData();
